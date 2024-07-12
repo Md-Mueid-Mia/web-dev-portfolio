@@ -50,7 +50,7 @@
 .btn-primary:hover{
     background-color: #fff;
     color: #FD6E0A;
-    border: 2px solid #FD6E0A;
+    border: 1px solid #FD6E0A;
     transition: all ease .08s;
     -webkit-transition: all ease .08s;
     -moz-transition: all ease .08s;
@@ -257,4 +257,61 @@ footer textarea{
     padding: 10px 20px;
     margin-bottom: 24px;
     font-size: 19px;
+    border: none;
+}
+
+
+/* media Query responsive */
+
+
+@media screen and (max-width: 576px){
+    .skills-container,
+     .resume-container,
+     .about-items,
+      nav,
+      nav > ul
+      {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    nav > ul{
+        gap: 20px;
+    }
+  .banner{
+    margin: 20px;
+  }
+    .header{
+        background-image: none;
+    }
+    footer, .about{
+        flex-direction: column;
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"], input[type="email"]{
+        width: calc(100% - 40px);
+    }
+    footer textarea{
+        width: calc(100% - 40px);
+        border: none;
+    }
+    .about-container{
+        width: 100%;
+        border: none;
+    }
+    .banner-profile-pic{
+        width: 0%;
+    }
+}
+
+/* Tablet media query */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .banner{
+        flex-direction: column;
+    }
+    .about{
+        padding: 25px;
+    }
 }
